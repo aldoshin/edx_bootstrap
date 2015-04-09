@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'snippets' => 'static_pages#index_snippets'
   get 'theme' =>  'static_pages#theme'
   get 'starter' => 'static_pages#starter'
+  get 'lab1' => 'static_pages#lab1'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
