@@ -1,0 +1,69 @@
+<!-- If you are using either fixed option, you are required to add padding to the top (for navbar-fixed-top), or bottom (for navbar-fixed-bottom) to the body element application.css.css has the body {padding-top: 70px;}-->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!-- <a href="/Index.html" class="navbar-brand">Navbar Example</a> -->
+			<%= link_to "Navbar Brand", root_path, class: "navbar-brand" %>
+
+			<!-- Configuring the hamburger - To add support for the hamburger, you need to add the components that will make it up. Inside of the navbar-header, add a button configured as below. -->
+			<!-- Brand (or Home link) - you will add a navbar-header, which will contain the a element, decorated with the navbar-brand element. If you wish to add a logo, reference the image in your hyperlink, just like you would do when making any other image a link.
+
+				The two classes configure the button as the toggle for the dropdown list, and collapsed by default, respectively. The data-toggle attribute targets the collapse state, meaning when you click, or tap, on it the first time it will open, and close on the second click.
+			-->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+				<!-- Inside the button you will add the display. The first part of the display is designed for accessibility. By using the sr-only attribute, you are adding text that will not be displayed, but only read to screen readers. Then you will add in the lines that will make up the hamburger, with each line being identified with the icon-bar class. -->
+				<span class="sr-only">Navigation toggle</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<!-- Adding links to the mobile dropdown - To add your existing navbar links into the dropdown list shown on mobile devices, they need to be surrounded by a container, typically div, with the collapse and navbar-collapse classes. These enable the collapsibility of the content. In addition, an id needs to be added to the div. This id will then be used by the button to toggle the display of the menu. -->
+		<div class="collapse navbar-collapse" id="hamburger-navigation">
+			<!-- Text
+			To add text, and ensure the correct color scheme, use the navbar-text class on the container element. -->
+			<div class="navbar-text">
+				Simple text
+			</div>
+			<!-- Links container
+			Navbar links are added into an unordered list container. This container is decorated with nav and navbar-nav. Links are then added in as list items, and use standard HMTL for creating hyperlinks. If you wish to mark a link as the current page, decorate the li element with the active class. -->
+			<ul class="nav navbar-nav" role="menu">
+				<li> 
+					<%= link_to "Index Snippets", snippets_path, class: 'active' %>
+					<span class="sr-only">current</span>
+				</li>
+				<li><%= link_to "Starter", starter_path %></li>
+				<!-- Dropdown lists
+
+				To add a dropdown list of links, you need to add three components.
+
+				The first will be a new list item, just like before, but this time you will decorate it with the dropdown class; this will be the container for the entire dropdown component.
+
+				The second will be a link that will toggle the dropdown list, which is decorated with three attributes, class='dropdown-toggle', role='button', data-toggle='dropdown'.
+
+				Finally, the content for the dropdown will be placed inside of an unordered list container, and decorated with the dropdown-menu class. To add links to the dropdown, you will add them to this container, just like you did when adding links to the navbar. -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret"/></a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Theme", theme_path %></li>
+						<li><%= link_to "Index Navbar", indexnavbar_path %></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- Positioning content
+			You can place content on the left or right of the navbar by using navbar-left and navbar-right classes, respectively. -->
+			<div class="navbar-text navbar-right">
+				<!-- Links
+				To add normal links that are not to be considered as part of the navbar, add the navbar-link class to the a element. The anchor must be contained inside of a navbar-text container. -->
+				<a class="navbar-link" href="#">Link On The Right</a>
+			</div>
+			<p>Text outside a nav class def</p>
+		</div>
+	</div>
+</nav>
+<div class="col-xs-12 col-md-9 col-md-push-3">
+	<%= render 'shared/snippets' %>
+</div>
+<div class="col-xs-12 col-md-3 col-md-pull-9">
+	<h3>My Not SO Important Content here</h3>
+</div>
