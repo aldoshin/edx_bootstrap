@@ -29,10 +29,10 @@
 			Navbar links are added into an unordered list container. This container is decorated with nav and navbar-nav. Links are then added in as list items, and use standard HMTL for creating hyperlinks. If you wish to mark a link as the current page, decorate the li element with the active class. -->
 			<ul class="nav navbar-nav" role="menu">
 				<li> 
-					<%= link_to "Index Snippets", snippets_path, class: 'active' %>
+					<%= link_to "Lab 1", lab1_path, class: 'active' %>
 					<span class="sr-only">current</span>
 				</li>
-				<li><%= link_to "Starter", starter_path %></li>
+				
 				<!-- Dropdown lists
 
 				To add a dropdown list of links, you need to add three components.
@@ -45,8 +45,20 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret"/></a>
 					<ul class="dropdown-menu">
+						<li><%= link_to "Starter", starter_path %></li>
 						<li><%= link_to "Theme", theme_path %></li>
+						<li><%= link_to "Index Snippets", snippets_path %></li>
 						<li><%= link_to "Index Navbar", indexnavbar_path %></li>
+						<li><%= link_to "Tabs", tabs_path %></li>
+						<li><%= link_to "Scrollspy", scrollspy_path %></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">Public dir (no Themed)<span class="caret"/></a>
+					<ul class="dropdown-menu">
+						<li><a href="/labo1">Lab 1</a></li>
+						<li><a href="/navbar">Navbar</a></li>
+						<li><a href="/tabsAndScroll">Tabs and Scrollspy</a></li>
 					</ul>
 				</li>
 			</ul>

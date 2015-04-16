@@ -1,0 +1,31 @@
+<!-- SCROLLSPY SAMPLE -->
+<!-- The first step to adding scrollspy to your page is to add a nav element. The nav element needs the classes navbar (to mark it as a navbar), navbar-default (to enable the color scheme), and navbar-static (to allow it to scroll with the page). In addition, you will want to add the role='navigation' attribute for accessibility. -->
+<nav class="navbar navbar-default navbar-static" role="navigation" id="navbar-spy">
+	<!-- Inside of the nav element, you'll add an unordered list. The ul element needs to have both nav and navbar-nav classes added to it. Inside of there you will add the links that will act as the navigation links to the scrollspy content. Each link will point to the ID of the content's container, again making sure to use CSS selector syntax. -->
+	<ul class="nav navbar-nav">
+		<li><a href="#scroll-first">First</a></li>
+		<li><a href="#scroll-second">Second</a></li>
+	</ul>
+</nav>
+<!-- Content -->
+
+<!-- The content that the user will navigate through using scrollspy needs to be inside of a container decorated with data-spy='scroll', and its data-target attribute set to the ID set on the nav element (again using CSS selector syntax). If you want to use scrollspy for the navigation of the entire page, say for a frequently asked questions (FAQ) page, you can use those attributes on the body element. Finally, the style of the containing element needs to have position:relative in order to ensure the tabs highlight correctly as the user scrolls. -->
+<!-- In the example below, I use a div as the container, with the height sent to a small value, to reduce the vertical space for my demo, and then overflow-y set to scroll to enable scrolling. -->
+<div data-target="#navbar-spy" data-spy="scroll" style="height:150px;overflow-y:scroll;position:relative;">
+	<div id="scroll-first">
+		<h2>Navigation</h2>
+
+		The first step to adding scrollspy to your page is to add a nav element. The nav element needs the classes navbar (to mark it as a navbar), navbar-default (to enable the color scheme), and navbar-static (to allow it to scroll with the page). In addition, you will want to add the role='navigation' attribute for accessibility.
+
+		In addition, you will need to give the nav element an ID. When scrolling through content, the tab that represents the data that is currently being viewed should be active; Bootstrap handles this by requiring you to point the container for the data back to the navigation.
+	</div>
+	<br/>
+	<br/>
+	<div id="scroll-second">
+		<h2>Content</h2>
+
+		The content that the user will navigate through using scrollspy needs to be inside of a container decorated with data-spy='scroll', and its data-target attribute set to the ID set on the nav element (again using CSS selector syntax). If you want to use scrollspy for the navigation of the entire page, say for a frequently asked questions (FAQ) page, you can use those attributes on the body element. Finally, the style of the containing element needs to have position:relative in order to ensure the tabs highlight correctly as the user scrolls.
+
+		In the example below, I use a div as the container, with the height sent to a small value, to reduce the vertical space for my demo, and then overflow-y set to scroll to enable scrolling.
+	</div>
+</div>

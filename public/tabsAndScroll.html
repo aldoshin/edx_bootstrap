@@ -10,14 +10,18 @@
 			<div class="col-md-6">
 				<h2>Tabs</h2>
 				<!-- Tabs -->
+				<!-- In order to create the tabs section, you need to create an unordered list of links, similar to a list of links displayed in navbar. You need to decorate the ul element with the nav and nav-tabs classes, and set the role as tablist. -->
 				<ul class="nav nav-tabs" role="tablist">
+					<!-- The links need role='tab' and data-toggle='tab' set on them. In additon, the href attribute needs to be set to the ID of the container of the content you wish to display on that tab. For example, if the div that contains the data to display has an ID of Demo, you need to set the href of the link to be #Demo. Note again that when you target content for Bootstrap, you need to use the CSS selector syntax. In addition, you add active to the first one. -->
 					<li class="active"><a href="#tabs-first" role="tab" data-toggle="tab">First</a></li>
 					<li><a href="#tabs-second" role="tab" data-toggle="tab">Second</a></li>
 					<li><a href="#tabs-third" role="tab" data-toggle="tab">Third</a></li>
 				</ul>
 
 				<!-- Tab Content -->
+				<!-- The tab content is placed below the tabs, and inside of a containing div element with the tab-content class. -->
 				<div class="tab-content">
+					<!-- Each pane, or block of content to display under a tab, is also placed inside of containing div elements. Each container needs to be decorated with the tab-pane class. In addition, you add active to the first one to be displayed. Optionally, you can add the attribute fade to each pane to enable animation, and fade in to the first tab to be displayed to ensure it's shown to the user. -->
 					<div class="active tab-pane fade in" id="tabs-first">
 						<h2>First</h2>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a congue nibh. Ut sodales ipsum sed purus efficitur, dignissim venenatis quam malesuada. Aliquam mattis aliquam erat quis congue. Donec volutpat tincidunt ante ut lacinia. In sit amet mattis libero. Fusce mattis ex nec fermentum scelerisque. Vestibulum mattis nibh pretium scelerisque varius. Duis gravida maximus ex, condimentum condimentum neque mattis sit amet. Cras metus arcu, posuere sed arcu ut, tempus lobortis felis. Nam sodales mauris sit amet leo dapibus consequat. Nam mollis, arcu sed pulvinar imperdiet, orci erat egestas lectus, in porta libero enim quis mi. Nunc quis lectus purus. Praesent quis congue lacus. Integer in scelerisque nisi.
