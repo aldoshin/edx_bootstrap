@@ -6,4 +6,7 @@ Uses ``United`` [Bootswatch] (https://bootswatch.com/) theme
 
 For examples from edx check [This repo git](https://github.com/MicrosoftLearning/Bootstrap-edX)
 
-Images used in examples like Carousel are generated with [PLacehold.it](http://placehold.it/)
+Images used in examples like Carousel are generated with [Placehold.it](http://placehold.it/). To generate just call ``http://placehold.it/`` passing the size and the parameter ``text`` like
+```
+http://placehold.it/1200x675&text=Your+Sample+Text+Separated+by+plus+signs
+```
