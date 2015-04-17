@@ -11,12 +11,14 @@ Rails.application.routes.draw do
   get 'theme' =>  'static_pages#theme'
   get 'starter' => 'static_pages#starter'
   get 'lab1' => 'static_pages#lab1'
-  get 'navbar' => 'static_pages#navbar'
+
+  # week 2
   get 'indexnavbar' => 'static_pages#index_navbar'
   get 'tabs' => 'static_pages#tabs'
   get 'scrollspy' => 'static_pages#scrollspy'
   get 'accordion_example' => 'static_pages#accordion'
   get 'carousel' => 'static_pages#carousel'
+  get 'lab2' => 'static_pages#lab2'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
