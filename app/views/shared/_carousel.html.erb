@@ -1,0 +1,44 @@
+<!-- CAROUSEL SYNTAX -->
+
+<!-- The carousel control is really four parts. The first part is the container for the carousel. Inside of the container, you will create the set of indicators for the current slide, the container for all of the slides, and the navigation to allow the user to change slides. -->
+
+<!-- Container -->
+<!-- The container is a div element, with the carousel and slide classes, and the data-ride='carousel' attribute. In addition, the container will need an ID that will be used by the carousel indicators. -->
+<div id="carousel-parent" class="carousel slide" data-ride="carousel">
+	<!-- carousel content -->
+
+	<!-- Indicators -->
+	<!-- The indicators are inside of an unordered list container with the carousel-indicators class. Each indicator is a list item, with two attributes. The first is data-target, which points to the ID of the carousel's container, again using CSS selector syntax. The second is data-slide-to, which indicates the zero-based position to move the carousel to if the user clicked on that icon. Finally, the first image to display is flagged with the active class. -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-parent" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-parent" data-slide-to="1"></li>
+	</ol>
+	<!-- Slides -->
+	<!-- The slides are contained inside of a container with the carousel-inner class. -->
+	<div class="carousel-inner">
+		<!-- slides -->
+		<!-- Each individual slide will be inside of a container with an item class. Each slide can have whatever content you wish, typically images. In addition, you can add captions to the image, by adding a container with a carousel-caption class. Finally, the first slide to display should have the active class. -->
+		<div class="item active">
+			<img src="http://placehold.it/1200x675&text=My+First+Slide+Your+Sample+Text+Separated+by+plus+signs" alt="My image">
+			<div class="carousel-caption">
+				<h3>Caption Heading One</h3>
+				<p>Caption Text One</p>
+			</div>
+		</div>
+		<div class="item">
+			<img alt="Second slide" src="http://placehold.it/1200x675/ffffff&text=Second+slide">
+			<div class="carousel-caption">
+				<h2>Caption Heading Second</h2>
+				<p>Caption Text Second</p>
+			</div>
+		</div>
+	</div>
+	<!-- Navigation -->
+	<!-- Navigation is provided by adding links to the bottom of the carousel's container. Each link is decorated with carousel-control, and the href points to the ID of the carousel, again by using CSS selector syntax. The data-slide attribute indicates if clicking the button goes forwards (next) or backwards (prev). For the UI of the link, you can use glyphicons. To add a glyphicon in Bootstrap, simply create a span element, add both the glyphicon class, and the class of the glyphicon you wish to display. -->
+	<a href="#carousel-parent" class="left carousel-control" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a href="#carousel-parent" class="right carousel-control" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>

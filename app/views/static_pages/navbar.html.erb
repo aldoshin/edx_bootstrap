@@ -1,5 +1,5 @@
 <!-- If you are using either fixed option, you are required to add padding to the top (for navbar-fixed-top), or bottom (for navbar-fixed-bottom) to the body element application.css.css has the body {padding-top: 70px;}-->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<!-- <a href="/Index.html" class="navbar-brand">Navbar Example</a> -->
@@ -52,6 +52,7 @@
 						<li><%= link_to "Tabs", tabs_path %></li>
 						<li><%= link_to "Scrollspy", scrollspy_path %></li>
 						<li><%= link_to "Accordion", accordion_example_path %></li>
+						<li><%= link_to "Carousel", carousel_path %></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -61,6 +62,7 @@
 						<li><a href="/navbar">Navbar</a></li>
 						<li><a href="/tabsAndScroll">Tabs and Scrollspy</a></li>
 						<li><a href="/accordion1">Accordion</a></li>
+						<li><a href="/carouseledx">Carousel</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -75,9 +77,14 @@
 		</div>
 	</div>
 </nav>
-<div class="col-xs-12 col-md-9 col-md-push-3">
-	<%= render 'shared/snippets' %>
+<div class="container-fluid">
+	<div class="col-xs-12 col-md-9 col-md-push-3">
+		<%= render 'shared/snippets' %>
+	</div>
+	<div class="col-xs-12 col-md-3 col-md-pull-9">
+		<h3>Resize me to see the re arrange of my Not SO Important Content here</h3>
+	</div>
 </div>
-<div class="col-xs-12 col-md-3 col-md-pull-9">
-	<h3>My Not SO Important Content here</h3>
+<div class="container" style="margin-top:20px;">
+	<%= render 'shared/carousel' %>
 </div>
