@@ -1,0 +1,50 @@
+<!-- Accordion container -->
+
+<!-- The accordion is built using the panel capabilities of Bootstrap. The container will be decorated with the panel-group class. It will also need an ID to represent the accordion container. -->
+<div id="accordion-parent" class="panel-group">
+	<!-- accordion content -->
+	<!-- Panel header -->
+	<!-- Each collapsible section will be a panel inside of the panel group. Each panel will be decorated with the panel and panel-default (for color) classes. -->
+	<div class="panel panel-default">
+		<!-- panel content -->
+		<!-- Each panel will need a heading and a section for the content. The heading is created by adding a container, decorated with the panel-heading class, followed by a container for the title, typically a header element, with the panel-title class. -->
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<!-- heading content -->
+				<!-- Finally, the header needs a link to enable the collapsing for the panel. The link needs to be decorated with data-toggle='collapse'. It also needs to have data-parent set to the ID of the panel container you created earlier. And finally the href attribute needs to be set to the of the content panel, which you'll create shortly, again using the CSS selector syntax. -->
+				<a href="#panel-child-content-one" data-toggle="collapse" data-parent="#accordion-parent">Accordion 1</a>
+			</h4>
+		</div>
+		<!-- Panel content -->
+		<!-- Panel content needs two containers. The outer container will have the ID that will be referenced by the link, and two classes - panel-collapse and collapse. In addition, the first panel to be open needs to have the in class. -->
+		<div id="panel-child-content-one" class="panel-collapse collapse in">
+			<!-- Inside of that container, you will create one more, with a class of panel-body. -->
+			<div class="panel-body">
+				ACCORDION SYNTAX
+
+				Accordion container
+
+				The accordion is built using the panel capabilities of Bootstrap. The container will be decorated with the panel-group class. It will also need an ID to represent the accordion container.
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<!-- panel content -->
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<!-- heading content -->
+				<a href="#panel-child-content-two" data-toggle="collapse" data-parent="#accordion-parent">Accordion 2</a>
+			</h4>
+		</div>
+		<div id="panel-child-content-two" class="panel-collapse collapse">
+			<div class="panel-body">
+				<!-- content -->
+				Panel header
+
+				Each collapsible section will be a panel inside of the panel group. Each panel will be decorated with the panel and panel-default (for color) classes.
+
+				Each panel will need a heading and a section for the content. The heading is created by adding a container, decorated with the panel-heading class, followed by a container for the title, typically a header element, with the panel-title class.
+			</div>
+		</div>
+	</div>
+</div>

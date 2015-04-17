@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'indexnavbar' => 'static_pages#index_navbar'
   get 'tabs' => 'static_pages#tabs'
   get 'scrollspy' => 'static_pages#scrollspy'
+  get 'accordion_example' => 'static_pages#accordion'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
