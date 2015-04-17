@@ -4,7 +4,7 @@ Repo dedicated to exercises in bootstrap, This is not a rails application but wa
 
 Uses ``United`` [Bootswatch] (https://bootswatch.com/) theme 
 
-For examples from edx check [This GIT repository](https://github.com/MicrosoftLearning/Bootstrap-edX)
+For examples from edx check [This repo on GitHub](https://github.com/MicrosoftLearning/Bootstrap-edX)
 
 Images used in examples like Carousel are generated with [Placehold.it](http://placehold.it/). To generate just form an URL to the site ``http://placehold.it/`` passing the ``size`` and the parameter ``text`` like
 ```
