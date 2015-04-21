@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   get 'carousel' => 'static_pages#carousel'
   get 'lab2' => 'static_pages#lab2'
 
+  # week 3
+  get 'basic_form' => 'static_pages#basic_form'
+  get 'enhanced_input' => 'static_pages#enhanced_input'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

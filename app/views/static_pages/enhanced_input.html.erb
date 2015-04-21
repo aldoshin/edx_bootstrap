@@ -1,0 +1,108 @@
+<!-- ENHANCING CONTROLS -->
+
+<!-- HTML5 offers several improvements over the classic HTML controls, including the ability to add placeholders, and support for new data-types, such as email addresses. However, you'll notice that textboxes still look like textboxes. Bootstrap offers the ability to enhance textboxes, providing more inline support and guidance as to the type of data you expect from a user. -->
+<!-- ADDING GLYPHICONS TO FORM CONTROLS -->
+
+<!-- By adding a glyphicon to a form control, you can provide additional context to the user. Bootstrap provides a host of glyphicons, and makes it straight forward to add them to a form control. -->
+<div class="container">
+	<form role="form" class="form-horizontal">
+		<div class="form-group">
+			<legend>Form title</legend>
+		</div>
+		<div class="form-group">
+			<label for="user" class="control-label col-md-3">User:</label>
+			<!-- Creating the input group -->
+
+			<!-- In order to add a glyphicon to a form control, you need to create an input group. The input group will contain the components Bootstrap will use to construct the UI. -->
+			<div class="col-md-6">
+				<div class="input-group">
+					<!-- Creating the input group addon -->
+
+					<!-- Whatever content will be added on to the control must be added as an input group addon, which is accomplished by creating a container with the input-group-addon class -->
+					<div class="input-group-addon">
+						<!-- addons -->
+						<!-- Adding the glyphicon -->
+
+						<!-- Inside of the input group addon container, place whatever item it is you wish to be added to the control, such as a dollar sign, an at sign, or a glyphicon. -->
+						<span class="glyphicon glyphicon-user"></span>
+					</div>
+					<input type="text" id="user" name="user" class="form-control" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="twitter" class="control-label col-md-3">Twitter:</label>
+			<div class="col-md-6">
+				<div class="input-group">
+					<div class="input-group-addon">@</div>
+					<input type="text" id="twitter" name="twitter" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<!-- no label group -->
+			<!-- Always add labels -->
+			<!-- Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies. -->
+
+			<!-- The exact technique to be used (<label> elements hidden using the .sr-only class, or use of the aria-label, aria-labelledby, aria-describedby, title or placeholder attribute) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches. -->
+			<div class="col-md-6 col-md-offset-3">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+					<span class="input-group-addon" id="basic-addon2">@example.com</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Input groups -->
+
+		<!-- Extend form controls by adding text or buttons before, after, or on both sides of any text-based <input>. Use .input-group with an .input-group-addon to prepend or append elements to a single .form-control. -->
+
+		<!-- Textual <input>s only -->
+		<!-- Avoid using <select> elements here as they cannot be fully styled in WebKit browsers. -->
+
+		<!-- Avoid using <textarea> elements here as their rows attribute will not be respected in some cases. -->
+		<!-- Tooltips & popovers in input groups require special setting -->
+		<!-- When using tooltips or popovers on elements within an .input-group, you'll have to specify the option container: 'body' to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered). -->
+		<!-- Don't mix with other components -->
+		<!-- Do not mix form groups or grid column classes directly with input groups. Instead, nest the input group inside of the form group or grid-related element. -->
+
+		<!-- ========================================= -->
+		<!-- BUTTON GROUPS -->
+
+		<!-- Button groups allow you to make radio buttons or checkboxes have the same UI as buttons. The advantage to doing this, besides the fact that it just looks better, it is also more touch friendly than the default radio buttons or checkboxes. -->
+
+		<!-- Creating the group -->
+
+		<!-- The first step to converting radio buttons or checkboxes to look like buttons is to add the button group. The button group must also have the data-toggle="buttons" attribute set. -->
+
+		<div class="form-group">
+			<div class="col-md-offset-3 btn-group" data-toggle="buttons">
+				<!-- radio buttons -->
+				<!-- Adding radio button (or checkbox) -->
+
+				<!-- The second step is to add in the radio button or checkbox. The radio button or checkbox will be surrounded by a label. The label will provide the button interface. -->
+				<label class="btn btn-info active">
+					<input type="radio" id="first" name"first" checked/> First
+				</label>
+				<label class="btn btn-info">
+					<input type="radio" id="first" name"second"/> Second
+				</label>
+				<label class="btn btn-info">
+					<input type="radio" id="first" name"third"/> Third
+				</label>
+			</div>
+		</div>
+
+		<!-- CREATING BUTTONS -->
+
+		<!-- To create a button interface, you decorate the component with the appropriate classes. The first class tells Bootstrap the control should display as a button, and the second will be the modifier, indicating the color scheme to use. -->
+
+		<!-- Adding a button -->
+
+		<!-- To add a button, decorate the item in question, such as a hyperlink or button, with the btn class, and the appropriate modifier. -->
+		<div class="form-group">
+			<button type="submit" class="btn btn-success col-md-offset-6 col-md-3">Submit form</button>
+		</div>
+
+	</form>
+</div>

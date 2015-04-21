@@ -1,0 +1,27 @@
+<!-- CREATING HORIZONTAL FORMS -->
+
+<!-- By default, forms in Bootstrap are displayed vertically, meaning that the prompt for an input control, such as a textbox, is placed above the input control. Quite frequently, you want the prompt next to the input control. In order to do this, a little bit of structure is required for the form, and a couple of classes need to be added. -->
+
+<!-- Creating the form element -->
+
+<!-- In order for a form to use horizontal display, the form-horizontal class must be added to the form element. -->
+<div class="container">
+	<form role="form" class="form-horizontal">
+		<!-- Creating the rows for the form content -->
+
+		<!-- Horizontal forms use the same grid system we've already covered. However, you won't create normal rows like you did in the past. Instead, you will create form groups. Form groups tell Bootstrap that the controls inside of that section are, as the name implies, a group of controls for the form. In addition, the form-group class also creates a row, so you do not need to add in the row class. -->
+		<div class="form-group">
+			<!-- label and control -->
+			<!-- Adding the label -->
+
+			<!-- Adding labels to forms is a best practice. By adding a label, you've made your form more accessible for screen readers, as well as to touch displays, as clicking on the label will place the form on the associated control. The label element supports sizing by just adding the appropriate col-*-* class to the element. In order for the label to be recognized by Bootstrap as a form label, the control-label class must also be added. -->
+			<label class="control-label col-md-3" for="address" >Address:</label>
+			<!-- Adding the input control -->
+
+			<!-- The last item to add is the input control. In order for it to be recognized by Bootstrap, it must be decorated with the form-control class; if you forget that class the formatting won't be correct. In addition, the form control itself cannot be sized by using col-*-*; in order to size the form control, you place it inside of a div tag decorated with the appropriate sizing class. -->
+			<div class="col-md-6">
+				<input type="text" name="address" id="address" class="form-control"/>
+			</div>
+		</div>
+	</form>
+</div>
