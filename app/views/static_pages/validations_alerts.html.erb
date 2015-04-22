@@ -1,0 +1,108 @@
+<!-- VALIDATION -->
+
+<!-- If there's anything consistent about dealing with user input, it's that at some point someone is going to submit data that's incorrect. This might be because of an incorrect data type, a typo, or potentially something malicious. Regardless of the reason, you want to provide the user with feedback as to their mistake. -->
+
+<!-- Bootstrap offers several potential ways to do this, including inline validation. The advantage to inline validation is the user sees their error message in the same location as the error itself. -->
+
+<!-- ALERTS -->
+
+<!-- In addition to providing inline feedback on the controls themselves, you sometimes need to do a little more to get the user's attention. This might be a generic error message letting the user know they need to fix a couple of items, or it might be to let them know about the status of a background call that was made on behalf of the user, such as an Ajax call. This is where alerts come into play. -->
+
+<!-- Alerts are colorized sections of a page designed to get the user's attention. You can create an alert by creating a container with the correct Bootstrap classes. Keep in mind that alerts are not dynamic, but you can make them dynamic very easily by toggling the visible/hidden classes. -->
+<div class="container">
+	<legend>Inline Form Example</legend>
+	<div class="alert alert-success" role="alert">
+		<strong>Oh snap!</strong> Change a few things up and try submitting again.
+	</div>
+	<form class="form-inline">
+		<div class="form-group has-warning">
+			<label for="email" class="control-label">Email</label>
+			<input id="email" type="text" class="form-control" placeholder="Email with has-warning"/>
+		</div>
+		<div class="form-group has-success">
+			<!-- screen readers only -->
+			<label for="inputAmount" class="sr-only">Amount (in dollars)</label>
+			<div class="input-group">
+				<div class="input-group-addon">$</div>
+				<input type="text" id="inputAmount" class="form-control" placeholder="Amount with has-success"/>
+				<div class="input-group-addon">.00</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-success">Transfer Cash</button>
+	</form>
+	<br/>
+
+	<legend>Validations Example</legend>
+	<div class="alert alert-warning alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>Dismissible alerts</strong>
+		To make an alert dismissible, or closable, add the alert-dismissible class to the container, and add a button to allow the user to dismiss the alert. The button needs to be configured with the data-dismiss='alert' attribute.
+	</div>
+	<form class="form-horizontal">
+		<div class="form-group has-warning">
+			<label for="email2" class="col-sm-2 control-label">Email</label>
+			<div class="col-sm-10">
+				<div class="input-group">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-user"></span>
+					</div>
+					<input id="email2" type="text" class="form-control" placeholder="Email with has-warning class on form-group"/>
+				</div>
+			</div>
+		</div>
+		<!-- Add icon to the textbox -->
+
+		<!-- To add a glyphicon to the textbox to indicate status, first update the form-group container to include the has-feedback attribute. -->
+		<div class="form-group has-error has-feedback">
+			<label for="password" class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<!-- Then, after the textbox, or input-group, add a span element for the glyphicon. Ensure that the span element is decorated with the form-control-feedback class. -->
+				<input id="password" type="password" class="form-control" placeholder="Password with has-feedback and glyphicon span" />
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Remember me
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-log-in"></span> Sign in</a>
+			</div>
+		</div>
+	</form>
+	<div class="alert alert-info" role="alert">
+		<span class="glyphicon glyphicon-exclamation-sign"></span>
+		<span class="sr-only">Info:</span>
+		CREATING ALERTS
+		<br/>
+		To create an alert, you need to add in a container with the appropriate Bootstrap classes, and then configure it as needed.
+		<br/>
+		Alert container
+		<br/>
+		The alert container is a standard div element, with the alert class added.
+	</div>
+	<div class="alert alert-success">
+		ENABLING INLINE VALIDATION
+		<br/>
+		In order to enable inline validation, a couple of classes and items need to be added to the HTML.
+		<br/>
+		<b>Add validation state to the form-group</b>
+		<br/>
+		To use Bootstrap to set the color for the current validation state, add one of three classes to the form-group container:
+		<ul>
+			<li>has-success (green)</li>
+			<li>has-warning (yellow)</li>
+			<li>has-error (red)</li>
+		</ul>
+		<strong>Alert content</strong>
+		<p>
+			Alerts can contain whatever content you need to let the user know the current status. This can include header elements or other HTML.
+		</p>
+	</div>
+</div>

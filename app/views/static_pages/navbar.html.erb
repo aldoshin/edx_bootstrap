@@ -61,6 +61,7 @@
 						<li role="presentation" class="dropdown-header">Week 3</li>
 						<li><%= link_to "Horizontal Form", basic_form_path %></li>
 						<li><%= link_to "Enhanced Input (Buttons)", enhanced_input_path %></li>
+						<li><%= link_to "Validations And Alerts", validations_path %></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -78,6 +79,7 @@
 						<li class="divider"></li>
 						<li role="presentation" class="dropdown-header">Week 3</li>
 						<li><a href="/input_group">Enhanced Input (Buttons)</a></li>
+						<li><a href="/validation_alert">Validations and Alerts</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -94,12 +96,14 @@
 </nav>
 <div class="container-fluid">
 	<div class="col-xs-12 col-md-9 col-md-push-3">
+		<legend>Snippets</legend>
 		<%= render 'shared/snippets' %>
 	</div>
 	<div class="col-xs-12 col-md-3 col-md-pull-9">
-		<h3>Resize me to see the re arrange of my Not SO Important Content here</h3>
+		<h3>Resize me to see the <b>re arrange</b> of my Not SO Important Content here</h3>
 	</div>
 </div>
+<legend>Carousel</legend>
 <div class="container" style="margin-top:20px;">
 	<%= render 'shared/carousel' %>
 </div>

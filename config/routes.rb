@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   # week 3
   get 'basic_form' => 'static_pages#basic_form'
   get 'enhanced_input' => 'static_pages#enhanced_input'
+  get 'validations' => 'static_pages#validations_alerts'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
