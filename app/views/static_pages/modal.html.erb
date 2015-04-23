@@ -1,0 +1,35 @@
+
+<!-- button that opens the modal -->
+<div class="container">
+	<!-- data-toggle defines the function to open the dialog and the href or data-target refers to the modal's parent div's id  -->
+	<a class="col-md-3 btn btn-primary" data-toggle="modal" data-target='#modal-id'>Anchor Opens modal using data-target</a>
+	<!-- can use href button to open  -->
+	<a class="col-md-3 col-md-push-1 btn btn-primary" data-toggle="modal" href='#modal-id'>Anchor Opens Same modal using href</a>
+	<button type="button" class="col-md-3 col-md-push-2 btn btn-primary" data-toggle="modal" data-target="#modal-id">Button opens same dialog</button>
+</div>
+
+
+<div class="modal fade" id="modal-id" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+	<!-- definition of the modal dialog -->
+	<div class="modal-dialog">
+		<!-- defines modal content that will have header, body and footer -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- defines the button in the header showing the "x" with data-dismiss that will close the modal -->
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<!-- this is used by screen readers defined in aria-labelledby -->
+				<h4 id="modal-label" class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla nunc sem, ac consectetur est dignissim sit amet. Phasellus eget pulvinar nunc. Cras et arcu eu odio efficitur ultricies. Morbi convallis lorem id luctus vehicula. Vivamus sed ex mauris. Integer fermentum lectus in turpis interdum, vitae congue enim ullamcorper. Vestibulum vehicula urna nec orci pulvinar malesuada. Ut pretium lorem a est condimentum accumsan. Curabitur quis orci vel nisl mollis pharetra eu sed turpis. Duis consectetur ante sed sem luctus, vel blandit dolor eleifend. Vestibulum mollis ligula in nibh volutpat, eget volutpat dolor luctus. Mauris sed eleifend tortor. Proin at leo imperdiet, eleifend massa vel, fermentum leo.
+				</p>
+			</div>
+			<div class="modal-footer">
+				<!-- data-dismiss indicates that will close the modal -->
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
